@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <default>
+        <reference name="header">
+            <block type="ikom_websiteswitcher/switcher" name="store_switcher" 
+                as="store_switcher" template="ikom/websiteswitcher/switcher.phtml" />
+        </reference>
+    </default>
+</layout>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ikom_WebsiteSwitcher>
+            <version>0.1.0</version>
+        </Ikom_WebsiteSwitcher>
+    </modules>
+    <frontend>
+        <layout>
+            <updates>
+                <ikom_websiteswitcher>
+                    <file>ikom/websiteswitcher.xml</file>
+                </ikom_websiteswitcher>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <blocks>
+            <ikom_websiteswitcher>
+                <class>Ikom_WebsiteSwitcher_Block</class>
+            </ikom_websiteswitcher>
+        </blocks>
+    </global>
+</config>
