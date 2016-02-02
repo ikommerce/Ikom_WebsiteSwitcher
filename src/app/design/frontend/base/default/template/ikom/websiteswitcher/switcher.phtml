@@ -2,8 +2,8 @@
 $websites = $this->getWebsites();
 if (count($websites) > 1) : ?>
 <div class="form-website">
-    <label for="website_switcher"><?php echo $this->__('Select website:') ?></label>    
-    <select id="website_switcher" title="<?php echo $this->__('Select website:') ?>"
+    <label for="website_switcher"><?php echo $this->__('Ship to') ?></label>
+    <select id="website_switcher" title="<?php echo $this->__('Ship to') ?>"
     	onchange="document.location=this.options[selectedIndex].value">
 	<?php
 	$url_obj = new Mage_Core_Model_Url();
@@ -11,7 +11,7 @@ if (count($websites) > 1) : ?>
     	$default_store = $website->getDefaultStore();
     	$default_store_path = $url_obj->getBaseUrl(array('_store'=> $default_store->getCode()));
 		?>
-    	<option <?php if(Mage::app()->getWebsite()->getId() == $website->getId()): 
+    	<option <?php if(Mage::app()->getWebsite()->getId() == $website->getId()):
     	?>selected="selected"<?php endif; ?> value="<?php echo $default_store_path ?>"><?php echo $website->getName()?></option>
 	<?php endforeach; ?>
 	</select>
