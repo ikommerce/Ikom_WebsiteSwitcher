@@ -2,10 +2,19 @@
 <config>
     <modules>
         <Ikom_WebsiteSwitcher>
-            <version>0.1.0</version>
+            <version>0.1.1</version>
         </Ikom_WebsiteSwitcher>
     </modules>
     <frontend>
+         <translate>
+            <modules>
+                <ikom_websiteswitcher>
+                    <files>
+                        <default>Ikom_WebsiteSwitcher.csv</default>
+                    </files>
+                </ikom_websiteswitcher>
+            </modules>
+        </translate>
         <layout>
             <updates>
                 <ikom_websiteswitcher>
