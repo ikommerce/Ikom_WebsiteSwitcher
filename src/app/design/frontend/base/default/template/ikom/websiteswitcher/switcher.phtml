@@ -1,19 +1,29 @@
 <?php
 $websites = $this->getWebsites();
-if (count($websites) > 1) : ?>
-<div class="form-website">
-    <label for="website_switcher"><?php echo $this->__('Ship to') ?></label>
-    <select id="website_switcher" title="<?php echo $this->__('Ship to') ?>"
-    	onchange="document.location=this.options[selectedIndex].value">
-	<?php
-	$url_obj = new Mage_Core_Model_Url();
-	foreach ($websites as $website):
+if (count($websites) > 1) :
+  $current = Mage::app()->getWebsite();
+  ?>
+<div class="website-switcher dropdown">
+  <a href="#" class="dropdown-heading cover">
+    <span>
+      <span class="label"><?php echo $this->__('Ship to'); ?></span>
+      <span class="value"><?php echo $this->__($current->getName()) ?></span>
+      <span class="caret">&nbsp;</span>
+    </span>
+  </a>
+  <ul class="dropdown-content left-hand" style="display: none;">
+    <?php
+    $url_obj = new Mage_Core_Model_Url();
+    foreach ($websites as $website):
     	$default_store = $website->getDefaultStore();
     	$default_store_path = $url_obj->getBaseUrl(array('_store'=> $default_store->getCode()));
-		?>
-    	<option <?php if(Mage::app()->getWebsite()->getId() == $website->getId()):
-    	?>selected="selected"<?php endif; ?> value="<?php echo $default_store_path ?>"><?php echo $website->getName()?></option>
-	<?php endforeach; ?>
-	</select>
+		if ($current->getId() == $website->getId):
+		  echo '<li class="current">'.$website->getName().'</li>';
+		else:
+		  echo '<li><a href="'. $default_store_path.'">'. $website->getName() .'</li>';
+		endif;
+    endforeach;
+    ?>
+  </ul>
 </div>
 <?php endif; ?>
