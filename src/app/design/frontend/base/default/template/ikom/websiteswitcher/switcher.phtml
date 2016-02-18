@@ -22,7 +22,7 @@ if (count($websites) > 1) :
 		if ($current->getId() == $website->getId):
 		  echo '<li class="current">'.$website->getName().'</li>';
 		else:
-		  echo '<li><a href="'. $default_store_path.'">'. $website->getName() .'</li>';
+		  echo '<li><a href="'. $default_store_path.'">'. $website->getName() .'</a></li>';
 		endif;
     endforeach;
     ?>
