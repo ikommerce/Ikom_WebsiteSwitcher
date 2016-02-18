@@ -38,8 +38,10 @@
         <a href="#" class="dropdown-heading cover">
             <span>
                 <span class="label-lang"><?php echo $this->__('Language'); ?></span>
-                <span class="value"><?php echo $currStoreName; ?></span>
-                <span class="caret">&nbsp;</span>
+                <span id="value_language">
+                	<span class="value"><?php echo $currStoreName; ?></span>
+                	<span class="caret">&nbsp;</span>
+               	</span>
             </span>
         </a>
         <?php echo implode('', $html); ?>
