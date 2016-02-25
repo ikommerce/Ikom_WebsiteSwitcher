@@ -3,6 +3,6 @@ src/app/etc/modules/*    app/etc/modules/
 src/app/design/frontend/base/default/layout/ikom/websiteswitcher.xml /app/design/frontend/base/default/layout/ikom/websiteswitcher.xml
 src/app/design/frontend/base/default/template/ikom/websiteswitcher app/design/frontend/base/default/template/ikom/websiteswitcher
 src/app/locale/de_DE/* app/locale/de_DE/
-src/app/locale/es_ES/* app/locale/es_ES/
+src/app/locale/es_MX/* app/locale/es_MX/
 src/app/locale/fr_FR/* app/locale/fr_FR/
 src/app/locale/it_IT/* app/locale/it_IT/
