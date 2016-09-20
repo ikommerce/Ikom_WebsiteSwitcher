@@ -18,6 +18,9 @@ if (count($websites) > 1) :
     $url_obj = new Mage_Core_Model_Url();
     foreach ($websites as $website):
     	$default_store = $website->getDefaultStore();
+    	if (!$default_store->isActive) {
+    	   continue;
+    	}
     	$default_store_path = $url_obj->getBaseUrl(array('_store'=> $default_store->getCode()));
 		if ($current->getId() == $website->getId):
 		  echo '<li class="current">'.$website->getName().'</li>';
